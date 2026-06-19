@@ -1109,3 +1109,8 @@ requisitos minimos:
 - al menos una letra mayuscula y una minuscula
 - al menos un numero
 - al menos un caracter especial (`@`, `$`, `!`, `%`, `*`, `?`, `&`, `.`, `_`, `-`)
+
+### CODIGOS DOCKER
+> **docker compose up --build** inicializa todas las imagenes
+> **docker container ls** lista todas las imagenes
+> **entonces** 
