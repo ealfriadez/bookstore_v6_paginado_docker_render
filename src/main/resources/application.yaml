@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: bookstore
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:bookstore_db}}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+
+  # Para cargar data.sql con PostgreSQL, descomentar ambas propiedades juntas:
+  #sql:
+  #  init:
+  #    mode: always
+  # jpa:
+  #   defer-datasource-initialization: true
+
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO:update}
+    show-sql: ${JPA_SHOW_SQL:true}
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        jdbc:
+          "batch_size": 20
+        "order_inserts": true
+        "order_updates": true
+
+server:
+  port: ${SERVER_PORT:8083}
+
+jwt:
+  secret: ${JWT_SECRET:MiClaveSecretaMuyLargaDeAlMenos256BitsParaElAlgoritmoHS256}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000,http://localhost:4200}

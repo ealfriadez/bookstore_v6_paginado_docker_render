@@ -1,0 +1,50 @@
+services:
+  - type: web
+    name: bookstore-api
+    runtime: docker
+    region: oregon
+    plan: free
+    branch: main
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: bookstore-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: bookstore-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: bookstore-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: bookstore-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: bookstore-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRATION
+        value: "86400000"
+      - key: JPA_DDL_AUTO
+        value: update
+      - key: JPA_SHOW_SQL
+        value: "false"
+      - key: SERVER_PORT
+        value: "8083"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "*"
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+
+databases:
+  - name: bookstore-db
+    databaseName: bookstore_db
+    user: bookstore_user
+    region: oregon
+    plan: free
