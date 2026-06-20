@@ -1113,4 +1113,7 @@ requisitos minimos:
 ### CODIGOS DOCKER
 > **docker compose up --build** inicializa todas las imagenes
 > **docker container ls** lista todas las imagenes
-> **entonces** 
+> **docker exec -i bookstore_db psql -U postgres -d bookstore_db < src/main/resources/data.sql** ejecuta un script SQL desde un archivo especifico
+> **docker exec -it bookstore_db psql -U postgres -d bookstore_db** ingresar a la base de datos desde docker
+> **Get-Content src/main/resources/data.sql | docker exec -i bookstore_db psql -U postgres -d bookstore_db** igual al comando anterior pero para el Shell de Windows
+> **SELECT * FROM books LIMIT 5;** muestra los registros de las tablas desde DOCKER
