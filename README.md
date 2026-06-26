@@ -1117,9 +1117,7 @@ requisitos minimos:
 > **docker exec -it bookstore_db psql -U postgres -d bookstore_db** ingresar a la base de datos desde docker
 > **Get-Content src/main/resources/data.sql | docker exec -i bookstore_db psql -U postgres -d bookstore_db** igual al comando anterior pero para el Shell de Windows
 > **SELECT * FROM books LIMIT 5;** muestra los registros de las tablas desde DOCKER
-> **docker exec -it bookstore-postgres psql -U postgres -c "\l"** verificar el nombre de la base de datos
-> **docker compose down** Detiene y elimina los contenedores, las redes creadas por el docker-compose.yml y cualquier red puente asociada.
-> > **docker exec -it bookstore_db psql -U postgres -d bookstore_db** ingresar a la base de datos desde docker
+> **docker exec -it bookstore_db psql -U postgres -d bookstore_db** ingresar a la base de datos desde docker
 > **Get-Content src/main/resources/data.sql | docker exec -i bookstore_db psql -U postgres -d bookstore_db** igual al comando anterior pero para el Shell de Windows
 > **SELECT * FROM books LIMIT 5;** muestra los registros de las tablas desde DOCKER
 > **&admin123456#$** contraseña de BD en SUPABASE
