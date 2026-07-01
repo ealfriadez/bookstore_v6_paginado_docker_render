@@ -1122,3 +1122,9 @@ requisitos minimos:
 > **SELECT * FROM books LIMIT 5;** muestra los registros de las tablas desde DOCKER
 > **&admin123456#$** contraseña de BD en SUPABASE
 > **bookstore-AI** nombre proyecto en SUPABASE
+
+### PLANTILLA CARGA MASIVA
+> **Recomendación para la plantilla**
+> **Para que tus proveedores no se equivoquen, te sugiero crear un archivo Excel de ejemplo (una plantilla) con estos datos de prueba y enviárselo:**
+> **Fila 1 (Encabezados): Título | Autor | Nacionalidad | Género | Precio | Stock | Descripción**
+> **Fila 2 (Ejemplo): Cien años de soledad | Gabriel García Márquez | Peruano | Novela | 25.50 | 10 | Obra maestra del realismo mágico**
