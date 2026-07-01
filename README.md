@@ -1122,3 +1122,7 @@ requisitos minimos:
 > **SELECT * FROM books LIMIT 5;** muestra los registros de las tablas desde DOCKER
 > **&admin123456#$** contraseña de BD en SUPABASE
 > **bookstore-AI** nombre proyecto en SUPABASE
+> **docker compose stop "api"** detener un servicio especifico en docker"** iniciar un servicio especifico en docker
+> **docker compose logs -f "api"** ver los logs de un servicio especifico en docker
+> **docker compose up -d --build "api"** reconstruir la imagen para que el cambio surta efecto dentro del contenedor
+> **docker compose down** Detiene y elimina los contenedores y las redes virtuales
